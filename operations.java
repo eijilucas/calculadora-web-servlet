@@ -35,28 +35,33 @@ public class operations extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
 
-            //Obtém parametros do html
+            //Obtém parametros do html e trás o objeto calc da classe Calculadora
             String op = request.getParameter("op");
+            Calculadora calc = new Calculadora();
+            
             double v1 = Double.parseDouble(request.getParameter("txtv1"));
             double v2 = Double.parseDouble(request.getParameter("txtv2"));
             double res = 0;
+            
+            calc.setV1(v1);
+            calc.setV2(v2);
 
             //Switch para cada ação do usuário
             switch (op) {
                 case "+":
-                    res = v1 + v2;
+                    res = calc.somar();
                     break;
 
                 case "-":
-                    res = v1 - v2;
+                    res = calc.subtrair();
                     break;
 
                 case "/":
-                    res = v1 / v2;
+                    res = calc.dividir();
                     break;
 
                 case "*":
-                    res = v1 * v2;
+                    res = calc.multiplicar();
                     break;
             }
 
