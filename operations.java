@@ -39,29 +39,31 @@ public class operations extends HttpServlet {
             String op = request.getParameter("op");
             Calculadora calc = new Calculadora();
             
+            //Obtém os dados digitados pelo usuário na caixa de texto
             double v1 = Double.parseDouble(request.getParameter("txtv1"));
             double v2 = Double.parseDouble(request.getParameter("txtv2"));
             double res = 0;
             
+            //Seta os valores
             calc.setV1(v1);
             calc.setV2(v2);
 
             //Switch para cada ação do usuário
             switch (op) {
                 case "+":
-                    res = calc.somar();
+                    res = calc.somar();     //Soma
                     break;
 
                 case "-":
-                    res = calc.subtrair();
+                    res = calc.subtrair();     //Subtração
                     break;
 
                 case "/":
-                    res = calc.dividir();
+                    res = calc.dividir();   //Divisão
                     break;
 
                 case "*":
-                    res = calc.multiplicar();
+                    res = calc.multiplicar();   //Multiplicação
                     break;
             }
 
@@ -69,10 +71,10 @@ public class operations extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Calculadora</title>");
+            out.println("<title>Calculadora</title>");  //Título da página html
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Resultado: " + res + "</h1>");
+            out.println("<h1>Resultado: " + res + "</h1>"); //Exibe o resultado na tela.
             out.println("</body>");
             out.println("</html>");
         }
