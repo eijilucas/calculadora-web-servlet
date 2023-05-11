@@ -16,11 +16,11 @@ and open the template in the editor.
             <h1 class="title">
                 Calculadora
             </h1>
-            <form action="operations" method="GET"> 
-                <input type="text" name="txtv1" placeholder="Primeiro valor"> 
-                <input type="text" name="txtv2" placeholder="Segundo valor"> 
+            <form action="operations" method="GET"> < !-- Chama o ServLet e define o método utilizado, que nesse caso é o GET -- >
+                <input type="text" name="txtv1" placeholder="Primeiro valor">  < !-- Cria a caixa de texto definida como "Primeiro valor" -- >
+                <input type="text" name="txtv2" placeholder="Segundo valor">  < !-- Cria a caixa de texto definida como "Segundo valor" -- >
                 <div class="oper">
-                    <input type="submit" name="op" value="+">
+                    <input type="submit" name="op" value="+">   < !-- Botões para cada tipo de operação executada pelo usuário -- >
                     <input type="submit" name="op" value="-">
                     <input type="submit" name="op" value="/">
                     <input type="submit" name="op" value="*">
