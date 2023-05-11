@@ -10,9 +10,11 @@ package control;
  * @author lucas
  */
 public class Calculadora {
+    //Define os atributos valor 1 e valor 2
     private double v1;
     private double v2;
     
+    //Métodos de acesso getters ans setters
     public double getV1() {
         return v1;
     }
@@ -29,19 +31,20 @@ public class Calculadora {
         this.v2 = v2;
     }
     
-    public double somar() {
+    //Métodos para cada ação do usuário, resultando em uma operação matemática que retorna um valor do tipo double.
+    public double somar() {        //Soma os valores e retorna o resultado
         return v1 + v2;
     }
     
-    public double subtrair() {
+    public double subtrair() {     //Subtrai
         return v1 - v2;
     }
     
-    public double multiplicar() {
+    public double multiplicar() {   //Multiplica
         return v1 * v2;
     }
     
-    public double dividir() {
+    public double dividir() {   //Divide
         return v1 / v2;
     }
 }
